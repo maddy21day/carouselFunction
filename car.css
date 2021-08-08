@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+#carousel-container {
+    position: absolute;
+    width: 80vw;
+    height: 70%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 40px;
+}
+
+.carousel-background {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgb(253, 147, 147), rgb(255, 182, 255));
+    border-radius: 40px;
+}
+
+.carousel {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 40px;
+}
+
+.carousel-image {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background: transparent;
+}
+
+.card {
+    display: block;
+    height: 70%;
+    width: 33%;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 30px;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: content-box;
+}
+
+.active {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(204, 188, 39, 0.1);
+}
+
+@keyframes animate-right-to-left {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate-left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate-disappear {
+    0% {
+        width: auto;
+    }
+
+    100% {
+        width: 0px;
+    }
+}
+
+.card-text {
+    white-space: inherit;
+    font-size: 20px;
+    margin:2px;
+}
+
+.card-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 2px;
+}
+
+.card-image {
+    height: 60%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.carousel-button {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: -6vw;
+}
+
+#next {
+    right: -8vw;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .card{
+        height:30vh;
+    }
+    .card-image{
+        padding: 0px;
+    }
+    .card-title{
+        font-size: 18px;
+    }
+    #carousel-container{
+        height: 60%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .card{
+        height:40vh
+    }
+    .card-title{
+        font-size: 16px;
+    }
+    .card-text{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card{
+        width: 40%;
+        height : 55vw;
+    }
+    #carousel-container{
+        height: 55vh;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #carousel-container{
+        height: 60vh;
+    }
+    .card{
+        width: 100%;
+        height: 32vh;
+    }
+}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #carousel-container{
+        height: 150vw;
+    }
+    .card{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 321px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+    .card{
+        width: 100%;
+        height: 22vh;
+    }
+    .card-title{
+        font: 14px;
+    }
+    .card-text{
+        font-size: 12px;
+    }
+    /* #prev{
+        left:-10px;
+    }
+    #next{
+        right:-10px;
+    } */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    #carousel-container{
+        height: 80vh;
+    }
+    .card{
+        height: 55vh;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .card{
+        width: 40%;
+        height: 55vw;
+    }
+    #carousel-container{
+        height: 60vh;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {}
+
+@media only screen and (min-width : 1224px) {
+    .card{
+        height: 40vh;
+        width:18vw
+    }
+    #carousel-container{
+        height: 70vh;
+        width: 60vw;;
+    }
+}
